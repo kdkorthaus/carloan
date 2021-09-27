@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="408dp"
+        android:layout_height="87dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:background="@color/purple_200">
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="135dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp"
+            android:layout_weight="1"
+            android:text="ToggleButton" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="178dp"
+            android:layout_height="59dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginBottom="14dp"
+            android:layout_weight="1"
+            android:text="Calculate" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="411dp"
+        android:layout_height="96dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@color/purple_700">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="30dp"
+            android:text="CAR LOAN CALCULATOR"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="411dp"
+        android:layout_height="262dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textPurchaseprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Purchase Price:" />
+
+            <EditText
+                android:id="@+id/editPurchaseprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Purchase Price"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textDownpayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Down Payment:" />
+
+            <EditText
+                android:id="@+id/editDownpayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Down Payment"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textAnnualinterest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Annual Interest Rate:" />
+
+            <EditText
+                android:id="@+id/editAnnualinterest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Annual Interest Rate"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textMonths"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Length of Loan:" />
+
+            <EditText
+                android:id="@+id/editMonths"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Length of Loan in Months"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textTotal"
+        android:layout_width="227dp"
+        android:layout_height="64dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        app:layout_constraintVertical_bias="0.533" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your total monthly payment is..."
+        tools:layout_editor_absoluteX="107dp"
+        tools:layout_editor_absoluteY="420dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
